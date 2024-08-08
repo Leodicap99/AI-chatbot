@@ -35,14 +35,17 @@ npm start
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/41b02fac-a783-4cbf-8f49-74d5b805af08">
 2. Hover over the AI response and give it a thumbsup or thumbsdown if you liked the info!
    <img width="1501" alt="image" src="https://github.com/user-attachments/assets/b22e07ba-9c49-48ae-a019-08b3956418ab">
+3. The app supporst enter while in the text field to enter your questions instead of manually clicking on send
+4. The save chat option opens up a feedback form which you can provide.
+   <img width="1511" alt="image" src="https://github.com/user-attachments/assets/15902950-7557-42b2-be26-84e8c2b0cd53">
 
-3. Use the menu bar on your top left corner to access chat history
+5. Use the menu bar on your top left corner to access chat history
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6af61a79-721b-4eb5-ac08-1e95a980db76">
-4. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
+6. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
    
    <img width="255" alt="image" src="https://github.com/user-attachments/assets/99763591-158a-4934-ab9f-d3d55b27b76a">
 
-5. The previous chat is set to read only where the user can see his/her submitted feedback by clicking on "SHOW FEEDBACK" button
+7. The previous chat is set to read only where the user can see his/her submitted feedback by clicking on "SHOW FEEDBACK" button
    <img width="1511" alt="image" src="https://github.com/user-attachments/assets/7a6b3223-2989-4cca-aace-c21192546771">
 
 
