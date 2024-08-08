@@ -13,15 +13,18 @@
 5. I have used prettier to format my code
 6. I have used eslint for fixing any js errors i have in my project
 
-## ChatComponent details
+## Pre-requisites
+1. Ensure you have Node.js installed and npm installed. You can check if it is installed by running the following commands:
 
-### Use states
-1. inputValue for the users input
-2. messages for cumulative messages of both users and ai having the structure:-
-   {
-     text: '....',
-     sender: '' //can be either ai or user
-     thumbsUp: '' //only for sender as ai which is empty string by default and primary if clicked
-     thumbsDown: '' //same as above
-   } 
-3.
+```sh
+node -v
+npm -v
+```
+## Installation steps
+1. git clone https://github.com/Leodicap99/sentisum-assignment.git
+2. cd sentisum-assignment
+3. npm install
+
+## Running the Application
+
+npm start
