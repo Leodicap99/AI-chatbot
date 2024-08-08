@@ -5,7 +5,7 @@ import NavBarComponent from "./components/NavBarComponent";
 import store from "./redux/store";
 import { useMemo, useState } from "react";
 import ChatReadOnlyComponent from "./components/ChatReadOnlyComponent";
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
   const [index, setIndex] = useState(-1);
@@ -29,8 +29,10 @@ function App() {
             darkMode={darkMode}
             setDarkMode={setDarkMode}
           />
-          {index < 0 && <ChatComponent />}
-          {index >= 0 && <ChatReadOnlyComponent index={index} />}
+          <Box sx={{ paddingTop: "64px" }}>
+            {index < 0 && <ChatComponent />}
+            {index >= 0 && <ChatReadOnlyComponent index={index} />}
+          </Box>
         </>
       </ThemeProvider>
     </Provider>

@@ -18,7 +18,7 @@ function NavBarComponent({ setIndex, darkMode, setDarkMode }) {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="fixed">
           <Toolbar sx={{ backgroundColor: "primary" }}>
             <IconButton size="large" onClick={() => setOpen(true)}>
               <MenuIcon />

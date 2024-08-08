@@ -6,6 +6,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { useEffect, useState } from "react";
@@ -33,7 +34,7 @@ function ChatHistoryComponent({ open, setOpen, setIndex }) {
   return (
     <Box>
       <Drawer open={open} onClose={() => setOpen(false)}>
-        <Box sx={{ minWidth: "250px", p: 2 }}>
+        <Box sx={{ maxWidth: "250px", p: 2 }}>
           <List>
             <ListItem sx={{ justifyContent: "center" }}>
               <Button variant="contained" onClick={onHandleClickNewChat}>
@@ -59,7 +60,18 @@ function ChatHistoryComponent({ open, setOpen, setIndex }) {
                   onClick={() => onHandleClickChat(index)}
                   startIcon={<ChatIcon />}
                 >
-                  <ListItemText primary={e} />
+                  {/* I added a tooltip here for better visibility as I added no wrap*/}
+                  <Tooltip title={e} arrow>
+                    <ListItemText
+                      primary={e}
+                      sx={{
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        width: "100%",
+                      }}
+                    />
+                  </Tooltip>
                 </Button>
               </ListItem>
             ))}
