@@ -16,12 +16,14 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
-
+import ShareIcon from "@mui/icons-material/Share";
+import ShareDialog from "./ShareDialog";
 function ChatReadOnlyComponent({ index }) {
   const chat = useSelector((state) => state.conversations[index]);
   const [messages, setMessages] = useState([]);
   const [feedBackInfo, setFeedbackInfo] = useState({});
   const [openDialog, setOpenDialog] = useState(false);
+  const [openShareDialog,setOpenShareDialog] = useState(false);
   useEffect(() => {
     if (chat?.messages?.length) {
       let arr = [];
@@ -102,6 +104,7 @@ function ChatReadOnlyComponent({ index }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            gap: '20px'
           }}
         >
           <Button
@@ -111,6 +114,9 @@ function ChatReadOnlyComponent({ index }) {
           >
             Show Feeback
           </Button>
+          <IconButton onClick={()=>setOpenShareDialog(true)}>
+            <ShareIcon />
+          </IconButton>
         </Box>
       </Box>
       <Dialog open={openDialog}>
@@ -141,6 +147,7 @@ function ChatReadOnlyComponent({ index }) {
           <Button onClick={() => setOpenDialog(false)}>Close</Button>
         </DialogActions>
       </Dialog>
+      <ShareDialog openShareDialog={openShareDialog} setOpenShareDialog={setOpenShareDialog}/>
     </>
   );
 }
