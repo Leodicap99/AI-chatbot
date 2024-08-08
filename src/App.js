@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import "./App.css";
+import ChatComponent from "./components/ChatComponent";
+import NavBarComponent from "./components/NavBarComponent";
+import store from "./redux/store";
+import { useState } from "react";
+import ChatReadOnlyComponent from "./components/ChatReadOnlyComponent";
 
 function App() {
+  const [index,setIndex] = useState(-1);
+  console.log(index)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <>
+        <NavBarComponent setIndex={setIndex} />
+        {index < 0 && <ChatComponent />}
+        {index >= 0 && <ChatReadOnlyComponent index={index}/>}
+      </>
+    </Provider>
   );
 }
 
