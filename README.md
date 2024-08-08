@@ -42,3 +42,7 @@ npm start
    
    <img width="255" alt="image" src="https://github.com/user-attachments/assets/99763591-158a-4934-ab9f-d3d55b27b76a">
 
+5. The previous chat is set to read only where the user can see his/her submitted feedback by clicking on "SHOW FEEDBACK" button
+   <img width="1511" alt="image" src="https://github.com/user-attachments/assets/7a6b3223-2989-4cca-aace-c21192546771">
+
+
