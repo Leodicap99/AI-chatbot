@@ -33,9 +33,11 @@ npm start
 ## Flow of the Application
 1. Firstly you will be presented with a standard chat application
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/41b02fac-a783-4cbf-8f49-74d5b805af08">
+2. Hover over the AI response and give it a thumbsup or thumbsdown if you liked the info!
+   <img width="1501" alt="image" src="https://github.com/user-attachments/assets/b22e07ba-9c49-48ae-a019-08b3956418ab">
 
-2. Use the menu bar on your top left corner to access chat history
+3. Use the menu bar on your top left corner to access chat history
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6af61a79-721b-4eb5-ac08-1e95a980db76">
-3. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
-   
-   <img width="224" alt="image" src="https://github.com/user-attachments/assets/7020080d-bc54-43af-8be9-887d10b9eb52">
+4. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
+   <img width="255" alt="image" src="https://github.com/user-attachments/assets/99763591-158a-4934-ab9f-d3d55b27b76a">
+
