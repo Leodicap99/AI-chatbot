@@ -37,4 +37,5 @@ npm start
 2. Use the menu bar on your top left corner to access chat history
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/6af61a79-721b-4eb5-ac08-1e95a980db76">
 3. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
+   
    <img width="224" alt="image" src="https://github.com/user-attachments/assets/7020080d-bc54-43af-8be9-887d10b9eb52">
