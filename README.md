@@ -30,3 +30,7 @@ npm -v
 ```sh
 npm start
 ```
+## Flow of the Application
+1. Firstly you will be presented with a standard chat application
+2. Use the menu bar on your top left corner to access chat history
+3. If you want to go back to chatting with the AI use the menu icon again and click on New Chat.
