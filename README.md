@@ -4,6 +4,7 @@
 1. JavaScript
 2. React
 3. Material UI
+4. Redux toolkit
 
 ## General information
 1. I have created all the mock API in the mocks folder
@@ -26,5 +27,6 @@ npm -v
 3. npm install
 
 ## Running the Application
-
+```sh
 npm start
+```
