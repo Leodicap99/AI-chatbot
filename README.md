@@ -30,6 +30,19 @@ npm -v
 ```sh
 npm start
 ```
+## Reason behind technical choices
+* As I have mentioned I have used Material UI as my UI library as I have prior experience with it.
+* Dark mode functionality is pretty easy to implement with this compared to using context apis.
+* For mocking the AI response I used a regular promise with a 0.5 second delay to mimic an actual fetch call with a randomized list of info about sentisum.
+* I used redux store to handle all of the chats data management like add, edit etc
+* I used 2 different arrays in redux to manage the current chat as well as all the other chats
+
+## Reason behind my design choices
+* I have used ChatGPT's interface as my base model and build on top of that. 
+* We have our navbar on top mentioning the app name and dark mode functionality.
+* Our ChatGPT like interface for the chat
+* I have made our chat history as read only as I felt it aligned more with the instructions given to me
+
 ## Flow of the Application
 1. Firstly you will be presented with a standard chat application
    <img width="1512" alt="image" src="https://github.com/user-attachments/assets/41b02fac-a783-4cbf-8f49-74d5b805af08">
@@ -47,5 +60,6 @@ npm start
 
 7. The previous chat is set to read only where the user can see his/her submitted feedback by clicking on "SHOW FEEDBACK" button
    <img width="1511" alt="image" src="https://github.com/user-attachments/assets/7a6b3223-2989-4cca-aace-c21192546771">
+
 
 
