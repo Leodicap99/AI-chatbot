@@ -3,19 +3,36 @@ import "./App.css";
 import ChatComponent from "./components/ChatComponent";
 import NavBarComponent from "./components/NavBarComponent";
 import store from "./redux/store";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import ChatReadOnlyComponent from "./components/ChatReadOnlyComponent";
+import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 function App() {
-  const [index,setIndex] = useState(-1);
-  console.log(index)
+  const [index, setIndex] = useState(-1);
+  const [darkMode, setDarkMode] = useState(false);
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: darkMode ? "dark" : "light",
+        },
+      }),
+    [darkMode]
+  );
   return (
     <Provider store={store}>
-      <>
-        <NavBarComponent setIndex={setIndex} />
-        {index < 0 && <ChatComponent />}
-        {index >= 0 && <ChatReadOnlyComponent index={index}/>}
-      </>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <>
+          <NavBarComponent
+            setIndex={setIndex}
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />
+          {index < 0 && <ChatComponent />}
+          {index >= 0 && <ChatReadOnlyComponent index={index} />}
+        </>
+      </ThemeProvider>
     </Provider>
   );
 }

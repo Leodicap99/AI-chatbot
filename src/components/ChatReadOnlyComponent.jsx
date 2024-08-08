@@ -74,7 +74,7 @@ function ChatReadOnlyComponent({ index }) {
                 }}
               >
                 <CardContent>
-                  <Typography color="white">{message.text}</Typography>
+                  <Typography >{message.text}</Typography>
                 </CardContent>
                 {message.sender === "ai" &&
                   message.thumbsUp !== message.thumbsDown && (

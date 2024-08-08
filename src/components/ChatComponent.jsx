@@ -115,7 +115,7 @@ function ChatComponent() {
                 onMouseLeave={() => setHoveredIndex(-1)}
               >
                 <CardContent>
-                  <Typography color="white">{message.text}</Typography>
+                  <Typography >{message.text}</Typography>
                 </CardContent>
                 {message.sender === "ai" &&
                   (hoveredIndex === index ||
