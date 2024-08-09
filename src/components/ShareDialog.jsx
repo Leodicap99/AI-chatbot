@@ -12,6 +12,7 @@ function ShareDialog({openShareDialog, setOpenShareDialog }) {
   const [openToast, setOpenToast] = useState(false);
   const onHandleCopyLink = () => {
     setOpenToast(true);
+    navigator.clipboard.writeText(link);
   };
   return (
     <>
@@ -43,7 +44,7 @@ function ShareDialog({openShareDialog, setOpenShareDialog }) {
       <Snackbar
         open={openToast}
         onClose={() => setOpenToast(false)}
-        autoHideDuration={3000}
+        autoHideDuration={2000}
         message="Link copied to the clipboard"
       ></Snackbar>
     </>
