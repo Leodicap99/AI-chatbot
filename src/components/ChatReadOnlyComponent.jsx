@@ -18,6 +18,15 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import ThumbDownIcon from "@mui/icons-material/ThumbDown";
 import ShareIcon from "@mui/icons-material/Share";
 import ShareDialog from "./ShareDialog";
+/*
+-> This component is enabled only when a user has clicked on a previously saved chat
+-> I have made this component read only for the user to come and check their responses as well as feedback
+-> here index prop is used to denote the index of the conversation state to navigate to the correct chat
+-> messages state here is used to build up the messages between the user and the bot
+-> feedbackInfo is the feedback information the user has provided
+-> openDialog state opens up the feedback dialog that the user has previously filled
+-> openShareDialog state opens up a dialog for the user to share his/her conversation
+*/
 function ChatReadOnlyComponent({ index }) {
   const chat = useSelector((state) => state.conversations[index]);
   const [messages, setMessages] = useState([]);

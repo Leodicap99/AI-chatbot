@@ -12,6 +12,12 @@ import {
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import ChatIcon from "@mui/icons-material/Chat";
+/*
+-> This component shows up when the user clicks on the menu icon to view the chat history
+-> messageHeadings state is used to format the text to be shown to the user to differentiate each chat
+-> I have used the first text that the user has sent to do this
+-> New Chat button enables the user to navigate to the previously unsaved chat that they were working on or a new chat
+*/
 function ChatHistoryComponent({ open, setOpen, setIndex }) {
   const savedChat = useSelector((state) => state.conversations);
   const [messageHeadings, setMessageHeadings] = useState([]);

@@ -1,8 +1,14 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Snackbar, TextField, Tooltip } from "@mui/material";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import { useState } from "react";
+/*
+  -> This component is the share dialog
+  -> openToast refers to the state that checks if the user has copied the link and if so shoes a toast
+     at the bottom left of the screen
+*/
 function ShareDialog({openShareDialog, setOpenShareDialog }) {
-  const link = "https://chatgpt.com/c/c5b5d4d4-eb68-4333-8ab3-23e02837e0bd";
+  const link =
+    "https://sentisum.notion.site/Frontend-Assignment-975499c6b9eb4054bc8722dd9d141ba0";
   const [openToast, setOpenToast] = useState(false);
   const onHandleCopyLink = () => {
     setOpenToast(true);

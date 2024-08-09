@@ -25,12 +25,22 @@ import {
   editThumbsUp,
   saveChat,
 } from "../redux/chatSlice";
+/* 
+  -> This component is the user interface for the user to chat with the bot
+  -> hoveredindex checks if a user hovers over the ai bot's response
+  if hoveredIndex>=0 , then yes the user has and the index value locates the response
+  else the user hasnt hovered over an ai response
+  -> inputValue stores the value that the user has inputted in the chatbox textfield
+  -> openDialog checks if the user has click on the save chat button to bring up the feedback form
+  -> feedbackDesc hold the subjective feedback response from the user
+  
+  */
 function ChatComponent() {
   const [inputValue, setInputValue] = useState("");
   const [hoveredIndex, setHoveredIndex] = useState(-1);
   const [openDialog, setOpenDialog] = useState(false);
   const [rating, setRating] = useState(0);
-  const [feedbackDesc,setFeedbackDesc] = useState('');
+  const [feedbackDesc, setFeedbackDesc] = useState("");
   const dispatch = useDispatch();
   const currentChat = useSelector((state) => state.currentChat);
   const handleChangeInput = (e) => {
@@ -64,9 +74,9 @@ function ChatComponent() {
       stars: rating,
       desc: feedbackDesc,
     };
-    dispatch(addFeedback({feedback:feedback}));
+    dispatch(addFeedback({ feedback: feedback }));
     setOpenDialog(false);
-    setFeedbackDesc('');
+    setFeedbackDesc("");
     setRating(0);
   };
   const onClickCancelDialog = () => {
@@ -115,7 +125,7 @@ function ChatComponent() {
                 onMouseLeave={() => setHoveredIndex(-1)}
               >
                 <CardContent>
-                  <Typography >{message.text}</Typography>
+                  <Typography>{message.text}</Typography>
                 </CardContent>
                 {message.sender === "ai" &&
                   (hoveredIndex === index ||
@@ -195,7 +205,7 @@ function ChatComponent() {
             fullWidth
             placeholder="Enter your feedback here"
             sx={{ marginTop: "10px" }}
-            onChange={(e)=>setFeedbackDesc(e.target.value)}
+            onChange={(e) => setFeedbackDesc(e.target.value)}
           />
         </DialogContent>
         <DialogActions>
