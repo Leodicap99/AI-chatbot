@@ -9,7 +9,7 @@
 ## General information
 1. I have created all the mock API in the mocks folder
 2. I tried to use ChatGPT as a base design
-3. My input handles both click of the submit button or click enter when textfield is in focus
+3. I have designed it in such a way that users chat history is read only
 4. I have assigned a users text with a background color of primary main (light blue in mui) and grey for AI text
 5. I have used prettier to format my code
 6. I have used eslint for fixing any js errors i have in my project
@@ -42,6 +42,9 @@ npm start
 * We have our navbar on top mentioning the app name and dark mode functionality.
 * Our ChatGPT like interface for the chat
 * I have made our chat history as read only as I felt it aligned more with the instructions given to me
+
+## Things I have left out
+* Allow the user to convert the text into bold/italics using the standard shortcuts. This needs to be stored and rendered everywhere accordingly.(Bonus extension)
 
 ## Flow of the Application
 1. Firstly you will be presented with a standard chat application
