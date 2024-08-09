@@ -34,7 +34,6 @@ function NavBarComponent({ setIndex, darkMode, setDarkMode }) {
             </Typography>
             <IconButton
               onClick={handleThemeChange}
-              sx={{ color: darkMode ? "primary.main" : "yellow" }}
             >
               {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
             </IconButton>
