@@ -11,6 +11,8 @@ import {
   DialogContent,
   Rating,
   DialogActions,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
@@ -42,6 +44,7 @@ function ChatComponent() {
   const [rating, setRating] = useState(0);
   const [feedbackDesc, setFeedbackDesc] = useState("");
   const dispatch = useDispatch();
+  const [errorMessage,setErrorMessage] = useState(false);
   const currentChat = useSelector((state) => state.currentChat);
   const handleChangeInput = (e) => {
     setInputValue(e.target.value);
@@ -52,6 +55,7 @@ function ChatComponent() {
     }
   };
   const handleClick = async () => {
+    if(inputValue.length===0)return;
     dispatch(addMessage({ sender: "user", text: inputValue }));
     setInputValue("");
     let data = await mockAPIResponse(inputValue);
@@ -66,6 +70,10 @@ function ChatComponent() {
     dispatch(editThumbsDown(index));
   };
   const handleOpenFeedback = () => {
+    if(!currentChat.length){
+      setErrorMessage(true);
+      return;
+    }
     setOpenDialog(true);
   };
   const handleSaveChat = () => {
@@ -209,10 +217,22 @@ function ChatComponent() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleSaveChat}>Save</Button>
+          <Button variant="contained" onClick={handleSaveChat}>
+            Save
+          </Button>
           <Button onClick={onClickCancelDialog}>Cancel</Button>
         </DialogActions>
       </Dialog>
+      <Snackbar
+        open={errorMessage}
+        autoHideDuration={1000}
+        onClose={()=>setErrorMessage(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert severity="error" variant="filled" sx={{ width: "100%" }}>
+          No chat to be saved
+        </Alert>
+      </Snackbar>
     </>
   );
 }
